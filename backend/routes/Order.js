@@ -27,4 +27,14 @@ router.post("/route", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const data = await Order.find({});
+    res.json(data);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 module.exports = router;
