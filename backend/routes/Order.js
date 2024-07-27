@@ -5,10 +5,30 @@ const Order = require("../models/orders.model"); // Adjust the path as necessary
 // Route to create a new order
 router.post("/route", async (req, res) => {
   try {
-    const { email, phone, order } = req.body;
+    const {
+      email,
+      name,
+      phone,
+      basket,
+      chair,
+      tables,
+      elephants,
+      sofaSets,
+      pelletPlant,
+    } = req.body;
 
     // Validate input
-    if (!email || !phone || !order || !order.S || !order.M || !order.L) {
+    if (
+      !email ||
+      !name ||
+      !phone ||
+      !basket ||
+      !chair ||
+      !tables ||
+      !elephants ||
+      !sofaSets ||
+      !pelletPlant
+    ) {
       return res.status(400).json({ msg: "Please enter all fields" });
     }
 
@@ -16,7 +36,13 @@ router.post("/route", async (req, res) => {
     const newOrder = new Order({
       email,
       phone,
-      order,
+      name,
+      basket,
+      chair,
+      tables,
+      elephants,
+      sofaSets,
+      pelletPlant,
     });
 
     const savedOrder = await newOrder.save();

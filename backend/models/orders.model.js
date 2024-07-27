@@ -1,21 +1,10 @@
 const mongoose = require("mongoose");
 
-const sizeSchema = new mongoose.Schema({
-  S: {
-    type: Number,
-    required: true,
-  },
-  M: {
-    type: Number,
-    required: true,
-  },
-  L: {
-    type: Number,
-    required: true,
-  },
-});
-
 const orderSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
   email: {
     type: String,
     required: true,
@@ -24,9 +13,35 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  order: {
-    type: sizeSchema,
+  pelletPlant: {
+    type: Number,
     required: true,
+    default: 0,
+  },
+  elephants: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  chair: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  tables: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  basket: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  sofaSets: {
+    type: Number,
+    required: true,
+    default: 0,
   },
 });
 
