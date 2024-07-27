@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const AuthRouter = require("./routes/auth");
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -23,6 +25,8 @@ const connectToDB = async () => {
 
 app.use(express.json());
 app.use(cors());
+
+app.use("/api/auth", AuthRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
