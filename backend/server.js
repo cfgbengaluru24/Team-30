@@ -1,6 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
+const SiteRoutes = require("./routes/Sites");
+const OrderRoutes = require("./routes/Order");
+const DonorRoutes = require("./routes/Donation");
+
 require("dotenv").config();
 
 const app = express();
@@ -27,6 +32,10 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+app.use("/site", SiteRoutes);
+app.use("/order", OrderRoutes);
+app.use("/donor", DonorRoutes);
 
 // Start the server only after connecting to the database
 connectToDB().then(() => {
