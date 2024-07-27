@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="GPX Generator" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Dummy Polygon with 500 sq.ft</name>
+  </metadata>
+  <trk>
+    <name>Dummy Track</name>
+    <trkseg>
+      <trkpt lat="37.7749" lon="-122.4194"/>
+      <trkpt lat="37.7749" lon="-122.41932242"/>
+      <trkpt lat="37.77496148" lon="-122.41932242"/>
+      <trkpt lat="37.77496148" lon="-122.4194"/>
+      <trkpt lat="37.7749" lon="-122.4194"/> <!-- Closing the loop -->
+    </trkseg>
+  </trk>
+</gpx>
