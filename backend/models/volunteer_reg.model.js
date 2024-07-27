@@ -13,6 +13,10 @@ const volunteerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 
 const Volunteer = mongoose.model("Volunteer", volunteerSchema);
