@@ -1,7 +1,14 @@
+import React from "react";
 import "./App.css";
-
+import AdminPage from "./pages/AdminPage";
+// import Login from "./pages/Login";
+// import ProductShowcase from "./pages/Product_showcase";
+import Sidebar from "./pages/Sidebar";
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return <div>
+    <AdminPage/>
+  </div>
+  
 }
 
 export default App;
