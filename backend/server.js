@@ -5,16 +5,27 @@ const cors = require("cors");
 const SiteRoutes = require("./routes/Sites");
 const OrderRoutes = require("./routes/Order");
 const DonorRoutes = require("./routes/Donation");
+const AuthRouter = require("./routes/auth");
 
 require("dotenv").config();
-
-const AuthRouter = require("./routes/auth");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Check mongoose connection to db
 const connectionString = process.env.MONGO_URI;
+
+app.use(express.json());
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.use("/api/auth", AuthRouter);
+app.use("/api/site", SiteRoutes);
+app.use("/api/order", OrderRoutes);
+app.use("/api/donor", DonorRoutes);
 
 const connectToDB = async () => {
   try {
@@ -27,20 +38,6 @@ const connectToDB = async () => {
     process.exit(1);
   }
 };
-
-app.use(express.json());
-app.use(cors());
-
-app.use("/api/auth", AuthRouter);
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.use("/site", SiteRoutes);
-app.use("/order", OrderRoutes);
-app.use("/donor", DonorRoutes);
-
 // Start the server only after connecting to the database
 connectToDB().then(() => {
   app.listen(PORT, () => {
