@@ -1,17 +1,14 @@
 import React from 'react'
+import Box from './Box';
 
 const SiteManagement = () => {
-  return (
-    <div>
-        <div className="h-screen flex items-center justify-center bg-gray-100">
-            <div className="p-8 bg-white shadow-md rounded-lg">
-                <h1 className="text-2xl font-bold mb-4">Centered Content</h1>
-                <p className="text-gray-600">This content is centered in the middle of the page using Tailwind CSS.</p>
-            </div>
-        </div>
-      
-    </div>
-  )
+    return (
+        <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-teal-500 text-center">Lantana Camara Site Management</h2>
+            <Box />
+            
+       </div>
+    );
 }
 
 export default SiteManagement

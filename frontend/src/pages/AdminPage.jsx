@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { GetName } from '../controllers/GetRequests';
 import {Link} from "react-router-dom"
+import ResourceManagement from './ResourceManagement';
 
 const AdminPage = () => {
   const [user, setUser] = useState('')
@@ -23,10 +24,10 @@ const AdminPage = () => {
 
       <div className="flex flex-col space-y-4 border border-gray-700 shadow-lg p-4 rounded-lg">
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded"> 
-          <Link>Orders</Link>
+          <Link to="/admin/orders">Orders</Link>
         </button>
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
-          Resource Management
+          <Link to="/ResourceManagement">Resource Management</Link>
         </button>
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
         <Link to="/SiteManagement">Lantana Camara Site Management</Link>
