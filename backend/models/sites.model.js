@@ -14,7 +14,7 @@ const siteSchema = new mongoose.Schema({
     type: Number,
   },
   untapped_area: {
-    type: Number,
+    type: [Number],
   },
   last_tapping: {
     type: Date,

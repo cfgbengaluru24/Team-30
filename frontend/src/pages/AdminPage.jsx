@@ -24,7 +24,7 @@ const AdminPage = () => {
 
       <div className="flex flex-col space-y-4 border border-gray-700 shadow-lg p-4 rounded-lg">
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded"> 
-          <Link>Orders</Link>
+          <Link to="/admin/orders">Orders</Link>
         </button>
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
           <Link to="/ResourceManagement">Resource Management</Link>

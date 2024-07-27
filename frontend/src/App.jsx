@@ -8,6 +8,7 @@ import SiteManagement from './pages/SiteManagement';
 import ResourceManagement from './pages/ResourceManagement';
 import DisplayLayout from './ecommerce/DisplayLayout';
 import Form from './ecommerce/Form';
+import AdminOrders from './pages/AdminOrders'
 
 const App = () => {
     return (
@@ -16,10 +17,12 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/admin/dashboard" element={<AdminPage />} />
+                <Route path="/admin/orders" element={<AdminOrders />} />
                 <Route path="/SiteManagement" element ={<SiteManagement/>} />
                 <Route path="/ResourceManagement" element={<ResourceManagement />} />
                 <Route path="/DisplayLayout" element={<DisplayLayout />}/>
                 <Route path="/Form" element={<Form />} />
+
               </Routes>
 
             

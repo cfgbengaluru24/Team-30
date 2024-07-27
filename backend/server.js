@@ -6,6 +6,7 @@ const SiteRoutes = require("./routes/Sites");
 const OrderRoutes = require("./routes/Order");
 const DonorRoutes = require("./routes/Donation");
 const AuthRouter = require("./routes/auth");
+const untappedAreaRouter = require("./routes/untappedAreaRouter");
 
 require("dotenv").config();
 
@@ -26,6 +27,7 @@ app.use("/api/auth", AuthRouter);
 app.use("/api/site", SiteRoutes);
 app.use("/api/order", OrderRoutes);
 app.use("/api/donor", DonorRoutes);
+app.use("/api/area", untappedAreaRouter);
 
 const connectToDB = async () => {
   try {
