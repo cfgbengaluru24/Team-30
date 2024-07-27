@@ -9,7 +9,7 @@ router.get("/untapped-area", async (req, res) => {
     if (!latestSite) {
       return res.status(404).send({ message: "No entries found" });
     }
-    res.json(latestSite.untapped_area);
+    res.json(latestSite.untapped_area[0]);
   } catch (error) {
     res.status(500).send({ message: "Server error", error });
   }
