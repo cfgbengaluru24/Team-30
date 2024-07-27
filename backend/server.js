@@ -1,6 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
+const SiteRoutes = require("./routes/Sites");
+const OrderRoutes = require("./routes/Order");
+const DonorRoutes = require("./routes/Donation");
+
 require("dotenv").config();
 
 const AuthRouter = require("./routes/auth");
@@ -31,6 +36,10 @@ app.use("/api/auth", AuthRouter);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+app.use("/site", SiteRoutes);
+app.use("/order", OrderRoutes);
+app.use("/donor", DonorRoutes);
 
 // Start the server only after connecting to the database
 connectToDB().then(() => {
