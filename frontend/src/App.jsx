@@ -1,14 +1,22 @@
-import React from "react";
-import "./App.css";
-import AdminPage from "./pages/AdminPage";
-// import Login from "./pages/Login";
-// import ProductShowcase from "./pages/Product_showcase";
-import Sidebar from "./pages/Sidebar";
-function App() {
-  return <div>
-    <AdminPage/>
-  </div>
-  
-}
+import React from 'react';
+import Navbar from './components/Navbar';
+import HomePage from './components/Homepage';
+import AdminPage from './pages/AdminPage';
+import './index.css'; // Ensure to import the index.css for Tailwind CSS
+import { Routes, Route, Router } from 'react-router-dom';
+
+const App = () => {
+    return (
+        <div className="App">
+            <Navbar />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/admin/dashboard" element={<AdminPage />} />
+              </Routes>
+
+            
+        </div>
+    );
+};
 
 export default App;
