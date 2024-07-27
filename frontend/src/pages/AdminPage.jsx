@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { GetName } from '../controllers/GetRequests';
 import {Link} from "react-router-dom"
+import ResourceManagement from './ResourceManagement';
 
 const AdminPage = () => {
   const [user, setUser] = useState('')
@@ -26,7 +27,7 @@ const AdminPage = () => {
           <Link>Orders</Link>
         </button>
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
-          Resource Management
+          <Link to="/ResourceManagement">Resource Management</Link>
         </button>
         <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
         <Link to="/SiteManagement">Lantana Camara Site Management</Link>
