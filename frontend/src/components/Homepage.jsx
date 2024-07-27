@@ -1,4 +1,6 @@
+// HomePage.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -11,8 +13,13 @@ const HomePage = () => {
                         What we are doing to the natural world is a reflection of what we are doing to ourselves"
                     </p>
                     <div className="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="#about" className="bg-teal-500 text-white py-2 px-6 rounded hover:bg-teal-600">Collaborators</a>
-                        <a href="#about" className="bg-teal-500 text-white py-2 px-6 rounded hover:bg-teal-600">Donator</a>
+                        <a href="#collaborators" className="bg-teal-500 text-white py-2 px-6 rounded hover:bg-teal-600">Collaborators</a>
+                        <Link 
+                            to="/donator"
+                            className="bg-teal-500 text-white py-2 px-6 rounded hover:bg-teal-600"
+                        >
+                            Donator
+                        </Link>
                     </div>
                 </div>
             </header>
@@ -43,34 +50,7 @@ const HomePage = () => {
                                 <h3 className="text-xl font-semibold mb-4 text-teal-500">Service 3</h3>
                                 <p className="text-base text-gray-800">Description of the third service offered by Shola Trust. This section should provide details about what the service entails and how it benefits the community or environment.</p>
                             </div>
-                            {/* Add more services as needed */}
                         </div>
-                    </div>
-                </section>
-                <section className="py-12 md:py-16 lg:py-20 bg-gray-100 w-full" id="contact">
-                    <div className="max-w-4xl mx-auto px-4">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-teal-500">Contact Us</h2>
-                        <form className="bg-white p-6 md:p-8 lg:p-10 rounded shadow-md">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                                    <input type="text" id="name" name="name" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Your Name" required />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="email" id="email" name="email" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Your Email" required />
-                                </div>
-                            </div>
-                            <div className="mb-6">
-                                <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-                                <input type="text" id="subject" name="subject" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Subject" required />
-                            </div>
-                            <div className="mb-6">
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" name="message" rows="4" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" className="bg-teal-500 text-white py-2 px-6 rounded hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">Send Message</button>
-                        </form>
                     </div>
                 </section>
             </main>
