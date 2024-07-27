@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   MDBBtn,
   MDBContainer,
@@ -14,6 +15,7 @@ import axios from 'axios';
 import { PostOrders } from '../controllers/PostRequest';
 
 function App() {
+    const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,6 +38,10 @@ function App() {
     try {
       const response = await PostOrders(formData);
       console.log('Order submitted successfully:', response.data);
+      alert("Order Submitted Successfully!");
+      setTimeout(() => {
+        navigate('/'); // Adjust the path as needed
+      }, 1000);
       // Handle successful submission (e.g., display a success message, clear the form)
     } catch (error) {
       console.error('Error submitting order:', error);
