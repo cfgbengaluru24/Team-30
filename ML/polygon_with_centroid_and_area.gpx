@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <trkseg>
+      <trkpt lat="37.7749" lon="-122.4194">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.418">
+      </trkpt>
+      <trkpt lat="37.7735" lon="-122.418">
+      </trkpt>
+      <trkpt lat="37.7735" lon="-122.4194">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.4194">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.417">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.415">
+      </trkpt>
+      <trkpt lat="37.773" lon="-122.415">
+      </trkpt>
+      <trkpt lat="37.773" lon="-122.417">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.417">
+      </trkpt>
+      <trkpt lat="37.773" lon="-122.42">
+      </trkpt>
+      <trkpt lat="37.773" lon="-122.4185">
+      </trkpt>
+      <trkpt lat="37.7715" lon="-122.4185">
+      </trkpt>
+      <trkpt lat="37.7715" lon="-122.42">
+      </trkpt>
+      <trkpt lat="37.773" lon="-122.42">
+      </trkpt>
+      <trkpt lat="37.772" lon="-122.4175">
+      </trkpt>
+      <trkpt lat="37.772" lon="-122.416">
+      </trkpt>
+      <trkpt lat="37.7705" lon="-122.416">
+      </trkpt>
+      <trkpt lat="37.7705" lon="-122.4175">
+      </trkpt>
+      <trkpt lat="37.772" lon="-122.4175">
+      </trkpt>
+      <trkpt lat="37.7749" lon="-122.4194">
+      </trkpt>
+    </trkseg>
+  </trk>
+
+    <extensions>
+        <centroid>
+            <latitude>37.77324556512924</latitude>
+            <longitude>-122.41729145125863</longitude>
+        </centroid>
+        <area>9.86499999999452e-06</area> <!-- Area in square degrees -->
+    </extensions>
+    </gpx>

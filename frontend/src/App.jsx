@@ -3,13 +3,13 @@ import Navbar from './components/Navbar';
 import HomePage from './components/Homepage';
 import AdminPage from './pages/AdminPage';
 import './index.css'; // Ensure to import the index.css for Tailwind CSS
-import { Routes, Route, Router } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SiteManagement from './pages/SiteManagement';
 import ResourceManagement from './pages/ResourceManagement';
 import DisplayLayout from './ecommerce/DisplayLayout';
 import Form from './ecommerce/Form';
-import AdminOrders from './pages/AdminOrders' 
-import Register from './components/Register'
+import AdminOrders from './pages/AdminOrders';
+import Register from './components/Register';
 import DonatorFormPage from './components/DonatorFormPage';
 import { Helmet } from "react-helmet";
 import PredictionPage from "./CostPrediction/PredictionPage"
@@ -48,5 +48,4 @@ const App = () => {
     );
 };
 
-export default App
-
+export default App;
