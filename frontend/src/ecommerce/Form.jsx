@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import FormImg from "../images/FormImg.jpeg"
+  
 import {
   MDBBtn,
   MDBContainer,
@@ -170,7 +172,7 @@ function App() {
         </form>
 
         <div className="flex items-center justify-center bg-gray-200 p-8 lg:w-1/2 rounded-r-2xl">
-          <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" fluid className="w-full h-full object-cover" />
+          <MDBCardImage src= {FormImg} fluid className="w-full h-full object-cover" />
         </div>
       </MDBCard>
     </MDBContainer>

@@ -30,7 +30,7 @@ const HomePage = () => {
                         <p className="text-base md:text-lg lg:text-xl text-gray-800">
                             The Shola Trust is a non-profit, Charitable Trust involved in nature conservation in the Nilgiri region of South India. A group of young people based in Gudalur, at the edge of the Mudumalai Tiger Reserve, who are keen on doing something to protect the natural world around us. Most of us have ‘regular’ jobs, but spend the better part of our time working on conservation. We believe everyone is a wildlife enthusiast, excited at the prospect of seeing an elephant or tiger, and we try to help channel this enthusiasm towards conservation.
 
-                            The Sholas are a unique forest type, endemic to the southern part of the western ghats, and were the inspiration for us to start this organisation, hence the name.
+                            The Sholas are a unique forest type, endemic to the 500southern part of the western ghats, and were the inspiration for us to start this organisation, hence the name.
                         </p>
                     </div>
                 </section>
@@ -43,7 +43,7 @@ const HomePage = () => {
                                 <p className="text-base text-gray-800">Description of the first service offered by Shola Trust. This section should provide details about what the service entails and how it benefits the community or environment.</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold mb-4 text-teal-500">Service 2</h3>
+                                <h3 className="text-xl font-semibold mb-4 text-teal-">Service 2</h3>
                                 <p className="text-base text-gray-800">Description of the second service offered by Shola Trust. This section should provide details about what the service entails and how it benefits the community or environment.</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -54,7 +54,7 @@ const HomePage = () => {
                     </div>
                 </section>
             </main>
-            <footer className="bg-teal-500 text-white py-6">
+            <footer className="bg-gray-800 text-white py-6">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <div className="mb-4">
                         <p className="text-lg font-semibold">Get in Touch</p>
