@@ -66,7 +66,7 @@ const PredictionPage = () => {
             1. Site Selection and Evaluation
           </h2>
           <button className="bg-green-400 text-white font-bold py-4 px-8 rounded">
-            <a target="_blank">Evaluate Site</a>
+            <a target="_blank" href="http://ujjwal:8081/">Evaluate Site</a>
           </button>
         </div>
         <div className="p-6 bg-white rounded-lg shadow-md">

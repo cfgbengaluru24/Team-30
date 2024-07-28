@@ -32,11 +32,7 @@ const AdminOrders = () => {
                 <div className="text-lg mb-2 text-green-600">{item.phone}</div>
                 <div className="text-md mb-2">
                   <ul className="list-disc list-inside text-green-600">
-                    {Object.entries(item.order).map(([key, value]) => (
-                      <li key={key}>
-                        {key} x {value}
-                      </li>
-                    ))}
+                    
                   </ul>
                 </div>
               </div>
