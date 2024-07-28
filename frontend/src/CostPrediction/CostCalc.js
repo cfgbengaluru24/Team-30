@@ -47,5 +47,11 @@ export default function calculateCost(untapped_area) {
     const averageYieldPerSquareFoot = 1000 / HECTARE_TO_SQUARE_FEET; // in kilograms
     const costPerKilogram = costPerSquareFoot / averageYieldPerSquareFoot;
 
-    return netCost;
+    return {
+        totalCosts,
+        totalIncome,
+        netCost,
+        costPerSquareFoot,
+        costPerKilogram
+    };
 }

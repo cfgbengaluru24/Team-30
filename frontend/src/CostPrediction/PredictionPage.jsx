@@ -8,6 +8,12 @@ const PredictionPage = () => {
   const [ua, setUa] = useState(undefined);
   const [siteInfo, setSiteInfo] = useState({ name: "SiteA" });
   const [netCost, setNetCost] = useState(0);
+  const [totalCosts, setTotalCosts] = useState(0);
+  const [totalIncome, setTotalIncome] = useState(0);
+  const [costPerSquareFoot, setCostPerSquareFoot] = useState(0);
+  const [costPerKilogram, setCostPerKilogram] = useState(0);
+  totalIncome, netCost, costPerSquareFoot, costPerKilogram;
+  totalCosts;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +21,18 @@ const PredictionPage = () => {
         const temp = await GetAll(siteInfo);
         setUa(temp);
         console.log(temp);
-        setNetCost(calculateCost(temp.untapped_area[0]));
+        const {
+          totalIncome,
+          netCost,
+          costPerSquareFoot,
+          costPerKilogram,
+          totalCosts,
+        } = calculateCost(temp.untapped_area[0]);
+        setTotalCosts(totalCosts);
+        setTotalIncome(totalIncome);
+        setNetCost(netCost);
+        setCostPerKilogram(costPerKilogram);
+        setCostPerSquareFoot(costPerSquareFoot);
       } catch (error) {
         console.log(error);
       }
@@ -60,7 +77,17 @@ const PredictionPage = () => {
             </p>
           )): ""} */}
           {/* {ua ? JSON.stringify(ua) : ""} */}
-          <h3 className="text-xl font-bold mb-4">Net Cost : {netCost}</h3>
+          <h3 className="text-xl font-bold mb-4">Net Cost : {netCost.toPrecision(4)}</h3>
+          <h3 className="text-xl font-bold mb-4">total Costs : {totalCosts.toPrecision(4)}</h3>
+          <h3 className="text-xl font-bold mb-4">
+            total Income : {totalIncome.toPrecision(4)}
+          </h3>
+          <h3 className="text-xl font-bold mb-4">
+            costPerKilogram : {costPerKilogram.toPrecision(4)}
+          </h3>
+          <h3 className="text-xl font-bold mb-4">
+            costPerSquareFoot : {costPerSquareFoot.toPrecision(4)}
+          </h3>
         </div>
         <div className="p-6 bg-white rounded-lg shadow-md">
           <h2
