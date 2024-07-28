@@ -8,14 +8,12 @@ Brief description of your project. What does it do? What problem does it solve?
 
 - [Overview](#overview)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Project](#running-the-project)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
 - [Scripts](#scripts)
 - [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -25,6 +23,8 @@ Ensure you have the following installed on your machine:
 
 - Node.js (v14.x or later)
 - npm (v6.x or later) or yarn (v1.x or later)
+- Python (v3.7 or later)
+- pip (latest version)
 
 ### Installation
 
@@ -32,10 +32,7 @@ Ensure you have the following installed on your machine:
 
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-   ```
-
-````
+   cd your-repo-name  ```
 
 2. **Install dependencies**
 
@@ -115,10 +112,14 @@ In the project directory, you can run the following scripts:
 
 - **`npm start` or `yarn start`**: Starts the backend server.
 
+### ML
+- **`pip install -r requirements.txt` to install required dependencies.
+- **`streamlit run ML/streamLit.py --server.port=8081`** to run the required streamlit app.
+
 ## Folder Structure
 
-```plaintext
-your-repo-name/
+```
+Team-30/
 ├── backend/
 │   ├── node_modules/
 │   ├── src/
@@ -142,24 +143,30 @@ your-repo-name/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
+├── ml/
+│   ├── area.gpx
+│   ├── area.py
+│   ├── BRT Daily people count.jpg
+│   ├── face.py
+│   ├── iot.py
+│   ├── mmod_human_face_detector.dat
+│   ├── PHOTO-2024-07-27-14-23-48.jpg
+│   ├── polygon_with_centroid_and_area.gpx
+│   ├── streamLit.py
+│   ├── test1.jpg
+│   ├── test.jpg
+│   ├── vegetation.jpg
+│   ├── requirements.txt
+│   ├── .env
+│   └── README.md
 ├── .gitignore
 ├── README.md
 └── package.json
+
 ```
 
 ## Technologies Used
 
 - **Frontend**: React, Vite, CSS/SCSS
 - **Backend**: Node.js, Express, MongoDB (if applicable)
-
-## Contributing
-
-If you want to contribute to this project, please fork the repository, create a new branch, and submit a pull request. Make sure to follow the [contribution guidelines](CONTRIBUTING.md) (if you have any).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-````
+- **ML**: Tensorflow, Numpy, OpenCV
