@@ -7,6 +7,7 @@ const OrderRoutes = require("./routes/Order");
 const DonorRoutes = require("./routes/Donation");
 const AuthRouter = require("./routes/auth");
 const untappedAreaRouter = require("./routes/untappedAreaRouter");
+const bodyParser = require("body-parser");
 
 require("dotenv").config();
 
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 8080;
 const connectionString = process.env.MONGO_URI;
 
 app.use(express.json());
+app.use(bodyParser.json())
 app.use(cors());
 
 app.get("/", (req, res) => {

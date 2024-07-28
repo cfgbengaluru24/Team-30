@@ -3,9 +3,10 @@ const router = express.Router();
 const Site = require("../models/sites.model"); // Adjust the path as necessary
 
 // Route to get a thing by ID
-router.get("/untapped-area", async (req, res) => {
+router.get("/untapped-area/:name", async (req, res) => {
   try {
-    const latestSite = await Site.findOne().sort({ updatedAt: -1 });
+    const name = req.params.name;
+    const latestSite = await Site.findOne({name})
     if (!latestSite) {
       return res.status(404).send({ message: "No entries found" });
     }

@@ -20,3 +20,16 @@ export const GetOrders = async () => {
     throw error;
   }
 };
+
+
+export const GetAll = async (siteName) => {
+  try {
+    console.log(siteName)
+    const response = await api.post("/api/site/route", siteName)
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Error creating item:", error);
+    throw error;
+  }
+}

@@ -12,6 +12,7 @@ import AdminOrders from './pages/AdminOrders'
 import Register from './components/Register'
 import DonatorFormPage from './components/DonatorFormPage';
 import { Helmet } from "react-helmet";
+import PredictionPage from "./CostPrediction/PredictionPage"
 
 const App = () => {
   window.embeddedChatbotConfig = {
@@ -21,12 +22,13 @@ const App = () => {
     return (
         <div className="App">
             <Navbar />
+            
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/admin/dashboard" element={<AdminPage />} />
                 <Route path="/admin/orders" element={<AdminOrders />} />
                 <Route path="/SiteManagement" element ={<SiteManagement/>} />
-                <Route path="/ResourceManagement" element={<ResourceManagement />} />
+                <Route path="/ResourceManagement" element={<PredictionPage />} />
                 <Route path="/DisplayLayout" element={<DisplayLayout />}/>
                 <Route path="/Form" element={<Form />} />
                 <Route path="/register" element={<Register />} />
@@ -35,13 +37,13 @@ const App = () => {
 
               </Routes>
               <Helmet>
-      <script
-src="https://www.chatbase.co/embed.min.js"
-chatbotId="i_tqSm2CJv8nkbDJizp-g"
-domain="www.chatbase.co"
-defer>
-</script>
-</Helmet>
+              <script
+                src="https://www.chatbase.co/embed.min.js"
+                chatbotId="i_tqSm2CJv8nkbDJizp-g"
+                domain="www.chatbase.co"
+                defer>
+              </script>
+        </Helmet>
         </div>
     );
 };
