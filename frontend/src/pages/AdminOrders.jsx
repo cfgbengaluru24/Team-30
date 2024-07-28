@@ -18,20 +18,20 @@ const AdminOrders = () => {
   }, []);
 
   return (
-    <>
-      <h1>Order History</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-6 text-center text-green-800">Order History</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {orders.length > 0 ? (
           orders.map((item, index) => (
             <div
               key={index}
-              className="max-w-sm rounded overflow-hidden shadow-lg mb-4"
+              className="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl"
             >
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{item.email}</div>
-                <div className="font-bold text-xl mb-2">{item.phone}</div>
-                <div className="font-bold text-md mb-2">
-                  <ul>
+                <div className="font-bold text-xl mb-2 text-green-700">{item.email}</div>
+                <div className="text-lg mb-2 text-green-600">{item.phone}</div>
+                <div className="text-md mb-2">
+                  <ul className="list-disc list-inside text-green-600">
                     {Object.entries(item.order).map(([key, value]) => (
                       <li key={key}>
                         {key} x {value}
@@ -43,10 +43,10 @@ const AdminOrders = () => {
             </div>
           ))
         ) : (
-          <p>No orders available</p>
+          <p className="text-center text-gray-500">No orders available</p>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
